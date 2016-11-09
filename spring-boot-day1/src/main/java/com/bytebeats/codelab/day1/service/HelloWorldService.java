@@ -1,6 +1,9 @@
 package com.bytebeats.codelab.day1.service;
 
+import com.bytebeats.codelab.day1.domain.User;
 import org.springframework.stereotype.Service;
+
+import java.util.Arrays;
 
 /**
  * ${DESCRIPTION}
@@ -10,6 +13,15 @@ import org.springframework.stereotype.Service;
  */
 @Service("helloWorldService")
 public class HelloWorldService {
+
+    public User getUserById(Long id){
+        User user = new User();
+        user.setId(id);
+        user.setName("ricky");
+        user.setAge(27);
+        user.setHobbies(Arrays.asList("NBA", "旅游"));
+        return user;
+    }
 
     public String getHelloMessage(String name) {
         return "Hello " + name;

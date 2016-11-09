@@ -1,11 +1,9 @@
 package com.bytebeats.codelab.day1.controller;
 
+import com.bytebeats.codelab.day1.domain.User;
 import com.bytebeats.codelab.day1.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * ${DESCRIPTION}
@@ -20,8 +18,15 @@ public class HelloWorldController {
     @Autowired
     private HelloWorldService helloWorldService;
 
+    @RequestMapping(value = "user/{id}", method= RequestMethod.GET)
+    public User getUser(@PathVariable Long id) {
+
+        return helloWorldService.getUserById(id);
+    }
+
     @RequestMapping(value = "hello", method= RequestMethod.GET)
     public String hello(@RequestParam String name) {
+
         return helloWorldService.getHelloMessage(name);
     }
 }
