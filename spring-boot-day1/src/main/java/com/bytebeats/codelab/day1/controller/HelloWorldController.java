@@ -3,6 +3,7 @@ package com.bytebeats.codelab.day1.controller;
 import com.bytebeats.codelab.day1.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,7 +20,7 @@ public class HelloWorldController {
     private HelloWorldService helloWorldService;
 
     @RequestMapping("hello")
-    public String hello() {
-        return helloWorldService.getHelloMessage("ricky");
+    public String hello(@RequestParam String name) {
+        return helloWorldService.getHelloMessage(name);
     }
 }
