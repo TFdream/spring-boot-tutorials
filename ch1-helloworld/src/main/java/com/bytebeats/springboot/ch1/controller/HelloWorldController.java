@@ -1,7 +1,7 @@
-package com.bytebeats.codelab.day1.controller;
+package com.bytebeats.springboot.ch1.controller;
 
-import com.bytebeats.codelab.day1.domain.User;
-import com.bytebeats.codelab.day1.service.HelloWorldService;
+import com.bytebeats.springboot.ch1.domain.User;
+import com.bytebeats.springboot.ch1.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

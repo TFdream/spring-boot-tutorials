@@ -1,4 +1,4 @@
-package com.bytebeats.codelab.day1;
+package com.bytebeats.springboot.ch1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.bytebeats.codelab;
+package com.bytebeats.springboot.ch2;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package com.bytebeats.codelab.day1.domain;
+package com.bytebeats.springboot.ch1.domain;
 
 import java.util.List;
 

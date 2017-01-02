@@ -1,6 +1,6 @@
-package com.bytebeats.codelab.day1.service;
+package com.bytebeats.springboot.ch1.service;
 
-import com.bytebeats.codelab.day1.domain.User;
+import com.bytebeats.springboot.ch1.domain.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
