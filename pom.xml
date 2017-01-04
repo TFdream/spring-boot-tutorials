@@ -10,17 +10,17 @@
   </parent>
 
   <groupId>com.bytebeats.springboot</groupId>
-  <artifactId>spring-boot-parent</artifactId>
+  <artifactId>spring-boot-in-action</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
-  <name>spring-boot-parent</name>
+  <name>spring-boot-in-action</name>
   <url>http://maven.apache.org</url>
 
   <modules>
     <module>ch1-helloworld</module>
-    <module>ch2-swagger</module>
+    <module>ch2-swagger2</module>
   </modules>
 
   <properties>
@@ -95,7 +95,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
+        <version>3.6.0</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>

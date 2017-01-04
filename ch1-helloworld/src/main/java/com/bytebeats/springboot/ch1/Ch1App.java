@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class App {
+public class Ch1App {
 
     public static void main( String[] args ) throws Exception {
 
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(Ch1App.class, args);
     }
 }

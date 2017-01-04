@@ -26,7 +26,8 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                //为当前包路径
+                .apis(RequestHandlerSelectors.basePackage("com.bytebeats.springboot.ch2.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

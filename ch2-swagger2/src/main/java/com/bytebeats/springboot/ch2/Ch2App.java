@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication(scanBasePackages = {"com.bytebeats.springboot.ch2"})
-public class App {
+public class Ch2App {
 
     public static void main( String[] args ) {
 
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(Ch2App.class, args);
     }
 }
