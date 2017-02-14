@@ -21,6 +21,7 @@
   <modules>
     <module>ch1-helloworld</module>
     <module>ch2-swagger2</module>
+    <module>ch3-mybatis3</module>
   </modules>
 
   <properties>
@@ -36,12 +37,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
         <version>${spring-boot.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-tomcat</artifactId>
-        <version>${spring-boot.version}</version>
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -79,6 +74,35 @@
         <groupId>io.springfox</groupId>
         <artifactId>springfox-swagger-ui</artifactId>
         <version>2.6.1</version>
+      </dependency>
+
+      <!--log-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.21</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>1.7.21</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>1.7.21</version>
+      </dependency>
+
+      <!--use logback as log impl-->
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.1.7</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.1.7</version>
       </dependency>
 
       <dependency>

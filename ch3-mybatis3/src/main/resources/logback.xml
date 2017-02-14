@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<contextName>ch3-mybatis3</contextName>
+
+	<!-- 日志文件存储路径 -->
+	<property name="LOG_HOME" value="D:/logs" />
+
+	<!-- 控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/info/ch3-mybatis3-info.log</file>
+		<append>true</append>
+
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+
+		<!-- 每小时生成日志文件 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/info/ch3-mybatis3.%d{yyyy-MM-dd-HH}-info.log.gz
+			</fileNamePattern>
+			<!-- 日志文件保留15天 -->
+			<maxHistory>360</maxHistory>
+		</rollingPolicy>
+
+		<!-- 格式化输出 -->
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/error/ch3-mybatis3-error.log</file>
+		<append>true</append>
+
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/error/ch3-mybatis3.%d{yyyy-MM-dd-HH}-error.log.gz
+			</fileNamePattern>
+			<maxHistory>360</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 异步日志配置 -->
+	<appender name="info_async" class="ch.qos.logback.classic.AsyncAppender">
+		<discardingThreshold>20</discardingThreshold>
+		<queueSize>2000</queueSize>
+		<appender-ref ref="Info" />
+	</appender>
+
+	<appender name="error_async" class="ch.qos.logback.classic.AsyncAppender">
+		<discardingThreshold>20</discardingThreshold>
+		<queueSize>2000</queueSize>
+		<appender-ref ref="Error" />
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="info_async" />
+		<appender-ref ref="error_async" />
+	</root>
+
+</configuration>
