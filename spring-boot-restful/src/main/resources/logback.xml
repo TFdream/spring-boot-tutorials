@@ -1,5 +1,5 @@
 <configuration debug="false">
-	<contextName>springboot-mybatis</contextName>
+	<contextName>springboot-restful</contextName>
 	<property name="LOG_HOME" value="D:/logs/" />
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -9,7 +9,7 @@
 	</appender>
 
 	<appender name="appInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOG_HOME}/info/springboot-mybatis-info.log</file>
+		<file>${LOG_HOME}/info/springboot-restful-info.log</file>
 		<append>true</append>
 
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -18,7 +18,7 @@
 
 		<!-- 每天生成日志文件 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_HOME}/info/springboot-mybatis.%d{yyyy-MM-dd}-info.log.gz
+			<fileNamePattern>${LOG_HOME}/info/springboot-restful.%d{yyyy-MM-dd}-info.log.gz
 			</fileNamePattern>
 			<!-- 日志文件保留15天 -->
 			<maxHistory>360</maxHistory>
