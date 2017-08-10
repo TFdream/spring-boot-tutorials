@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mindflow.springboot.mybatis.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="User">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+
+        <result column="register_time" property="registerTime" jdbcType="TIMESTAMP"/>
+
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id, username, password, age, email, register_time,
+		create_time, modify_time
+	</sql>
+
+    <select id="getUserByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from tb_user
+        <where>
+            username = #{username,jdbcType=VARCHAR}
+        </where>
+    </select>
+
+    <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_user (username, password, age, email, register_time,
+		create_time, modify_time
+          )
+        values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER},
+          #{email,jdbcType=VARCHAR}, #{registerTime,jdbcType=TIMESTAMP},
+          now(), now()
+          )
+  </insert>
+
+</mapper>
