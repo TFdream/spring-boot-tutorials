@@ -22,12 +22,14 @@
         <module>spring-boot-restful</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis3</module>
+        <module>spring-boot-actuator</module>
     </modules>
 
     <properties>
+        <swagger.version>2.6.1</swagger.version>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <logback.version>1.1.11</logback.version>
+        <logback.version>1.2.3</logback.version>
         <junit.version>4.12</junit.version>
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

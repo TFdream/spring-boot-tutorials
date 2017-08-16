@@ -1,7 +1,9 @@
 package com.mindflow.springboot.mybatis.controller;
 
-import com.mindflow.springboot.mybatis.model.User;
+import com.mindflow.springboot.mybatis.model.UserDO;
 import com.mindflow.springboot.mybatis.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,19 +15,26 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 public class UserController {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private UserService userService;
 
     @RequestMapping(value = "users/{username}", method= RequestMethod.GET)
-    public User getUser(@PathVariable String username) {
-
-        return userService.getUserByName(username);
+    public UserDO getUser(@PathVariable String username) {
+        UserDO userDO = userService.getUserByName(username);
+        if(userDO==null){
+            logger.info("not find user:{}", username);
+            userDO = new UserDO();
+            userDO.setUsername(username);
+            userDO.setPassword("root");
+            userDO.setAge(28);
+        }
+        return userDO;
     }
 
     @RequestMapping(value = "user/add", method= RequestMethod.GET)
-    public User addUser(@RequestParam String username) {
-
+    public UserDO addUser(@RequestParam String username) {
         return userService.addUser(username);
     }
 }

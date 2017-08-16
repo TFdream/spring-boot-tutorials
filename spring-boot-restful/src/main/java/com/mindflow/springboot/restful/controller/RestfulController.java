@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
  * @author Ricky Fung
  */
 @RestController
-@RequestMapping("/springboot")
 public class RestfulController {
 
     @Autowired

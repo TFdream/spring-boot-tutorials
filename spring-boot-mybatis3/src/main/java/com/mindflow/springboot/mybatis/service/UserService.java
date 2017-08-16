@@ -1,6 +1,6 @@
 package com.mindflow.springboot.mybatis.service;
 
-import com.mindflow.springboot.mybatis.model.User;
+import com.mindflow.springboot.mybatis.model.UserDO;
 
 /**
  * ${DESCRIPTION}
@@ -10,7 +10,7 @@ import com.mindflow.springboot.mybatis.model.User;
  */
 public interface UserService {
 
-    User getUserByName(String username);
+    UserDO getUserByName(String username);
 
-    User addUser(String username);
+    UserDO addUser(String username);
 }

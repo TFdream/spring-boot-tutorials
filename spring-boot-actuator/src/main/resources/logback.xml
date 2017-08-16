@@ -1,5 +1,5 @@
 <configuration debug="false">
-	<contextName>springboot-restful</contextName>
+	<contextName>springboot-actuator</contextName>
 	<property name="LOG_HOME" value="D:/logs/" />
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -9,7 +9,7 @@
 	</appender>
 
 	<appender name="appInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOG_HOME}/info/springboot-restful-info.log</file>
+		<file>${LOG_HOME}/info/springboot-actuator-info.log</file>
 		<append>true</append>
 
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -17,7 +17,7 @@
 		</filter>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_HOME}/info/springboot-restful.%d{yyyy-MM-dd}-info.log.gz
+			<fileNamePattern>${LOG_HOME}/info/springboot-actuator.%d{yyyy-MM-dd}-info.log.gz
 			</fileNamePattern>
 			<maxHistory>360</maxHistory>
 		</rollingPolicy>
