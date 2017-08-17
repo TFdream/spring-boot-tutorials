@@ -22,10 +22,14 @@
         <module>spring-boot-restful</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis3</module>
+        <module>spring-boot-mybatis3-multi-datasource</module>
         <module>spring-boot-actuator</module>
     </modules>
 
     <properties>
+        <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <druid.version>1.0.25</druid.version>
+        <mysql.connector.version>5.1.39</mysql.connector.version>
         <swagger.version>2.6.1</swagger.version>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.25</slf4j.version>

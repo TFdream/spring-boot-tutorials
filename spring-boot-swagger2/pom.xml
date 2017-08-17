@@ -47,6 +47,7 @@
     </dependencies>
 
     <build>
+        <finalName>spring-boot-swagger2</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
