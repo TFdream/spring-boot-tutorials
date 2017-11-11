@@ -1,7 +1,7 @@
-package com.mindflow.springboot.restful.controller;
+package springboot.helloworld.controller;
 
-import com.mindflow.springboot.restful.domain.User;
-import com.mindflow.springboot.restful.service.HelloWorldService;
+import springboot.helloworld.domain.User;
+import springboot.helloworld.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Ricky Fung
  */
 @RestController
-public class RestfulController {
+public class HelloController {
 
     @Autowired
     private HelloWorldService helloWorldService;

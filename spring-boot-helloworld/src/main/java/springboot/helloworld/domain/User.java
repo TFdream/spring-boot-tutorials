@@ -1,4 +1,4 @@
-package com.mindflow.springboot.restful.domain;
+package springboot.helloworld.domain;
 
 import java.util.List;
 

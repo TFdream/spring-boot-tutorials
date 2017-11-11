@@ -1,6 +1,6 @@
-package com.mindflow.springboot.restful.service;
+package springboot.helloworld.service;
 
-import com.mindflow.springboot.restful.domain.User;
+import springboot.helloworld.domain.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.mindflow.springboot.swagger;
+package springboot.helloworld;
 
 import org.junit.Test;
 
