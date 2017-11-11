@@ -1,4 +1,4 @@
-package com.mindflow.springboot.actuator.controller;
+package springboot.tutorials.actuator.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

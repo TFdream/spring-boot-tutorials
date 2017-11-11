@@ -1,4 +1,4 @@
-package com.mindflow.springboot.actuator;
+package springboot.tutorials.actuator;
 
 import org.junit.Test;
 
