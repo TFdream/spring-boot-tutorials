@@ -1,4 +1,4 @@
-package com.mindflow.springboot;
+package springboot.mybatis.xml;
 
 import org.junit.Test;
 

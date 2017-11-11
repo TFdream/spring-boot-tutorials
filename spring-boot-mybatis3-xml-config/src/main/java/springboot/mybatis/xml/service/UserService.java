@@ -1,12 +1,11 @@
-package com.mindflow.springboot.mybatis.service;
+package springboot.mybatis.xml.service;
 
-import com.mindflow.springboot.mybatis.model.UserDO;
+import springboot.mybatis.xml.model.UserDO;
 
 /**
  * ${DESCRIPTION}
  *
  * @author Ricky Fung
- * @date 2017-02-14 17:35
  */
 public interface UserService {
 

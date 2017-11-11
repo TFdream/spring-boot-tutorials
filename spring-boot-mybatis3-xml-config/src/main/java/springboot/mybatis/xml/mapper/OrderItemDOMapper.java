@@ -1,7 +1,7 @@
-package com.mindflow.springboot.mybatis.mapper;
+package springboot.mybatis.xml.mapper;
 
-import com.mindflow.springboot.mybatis.model.OrderItemDO;
-import com.mindflow.springboot.mybatis.model.OrderItemDOExample;
+import springboot.mybatis.xml.model.OrderItemDO;
+import springboot.mybatis.xml.model.OrderItemDOExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

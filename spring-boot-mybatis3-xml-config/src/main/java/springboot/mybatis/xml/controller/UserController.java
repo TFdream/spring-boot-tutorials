@@ -1,7 +1,7 @@
-package com.mindflow.springboot.mybatis.controller;
+package springboot.mybatis.xml.controller;
 
-import com.mindflow.springboot.mybatis.model.UserDO;
-import com.mindflow.springboot.mybatis.service.UserService;
+import springboot.mybatis.xml.model.UserDO;
+import springboot.mybatis.xml.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

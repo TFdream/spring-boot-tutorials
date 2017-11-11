@@ -1,7 +1,7 @@
 mybatis:
     mapper-locations: classpath:mapper/*.xml
-    type-aliases-package: com.mindflow.springboot.mybatis.model
-    type-handlers-package: com.mindflow.springboot.mybatis.typehandler
+    type-aliases-package: springboot.mybatis.model
+    type-handlers-package: springboot.mybatis.typehandler
     configuration:
         map-underscore-to-camel-case: true
         default-fetch-size: 100

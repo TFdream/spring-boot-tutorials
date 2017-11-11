@@ -1,4 +1,4 @@
-package com.mindflow.springboot.mybatis.model;
+package springboot.mybatis.xml.model;
 
 import java.math.BigDecimal;
 import java.util.Date;

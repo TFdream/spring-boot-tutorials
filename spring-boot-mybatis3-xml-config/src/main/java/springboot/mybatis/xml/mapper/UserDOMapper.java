@@ -1,7 +1,7 @@
-package com.mindflow.springboot.mybatis.mapper;
+package springboot.mybatis.xml.mapper;
 
-import com.mindflow.springboot.mybatis.model.UserDO;
-import com.mindflow.springboot.mybatis.model.UserDOExample;
+import springboot.mybatis.xml.model.UserDO;
+import springboot.mybatis.xml.model.UserDOExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

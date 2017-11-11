@@ -1,9 +1,9 @@
-package com.mindflow.springboot.mybatis.service.impl;
+package springboot.mybatis.xml.service.impl;
 
-import com.mindflow.springboot.mybatis.mapper.UserDOMapper;
-import com.mindflow.springboot.mybatis.model.UserDO;
-import com.mindflow.springboot.mybatis.model.UserDOExample;
-import com.mindflow.springboot.mybatis.service.UserService;
+import springboot.mybatis.xml.mapper.UserDOMapper;
+import springboot.mybatis.xml.model.UserDO;
+import springboot.mybatis.xml.model.UserDOExample;
+import springboot.mybatis.xml.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,6 @@ import java.util.List;
  * ${DESCRIPTION}
  *
  * @author Ricky Fung
- * @date 2017-02-14 17:37
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {

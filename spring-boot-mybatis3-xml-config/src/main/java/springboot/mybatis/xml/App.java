@@ -1,4 +1,4 @@
-package com.mindflow.springboot.mybatis;
+package springboot.mybatis.xml;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Hello world!
  */
-@SpringBootApplication(scanBasePackages = {"com.mindflow.springboot.mybatis"})
+@SpringBootApplication
 @MapperScan(basePackages = "com.mindflow.springboot.mybatis.mapper")
 public class App {
 
