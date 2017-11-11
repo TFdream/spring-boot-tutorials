@@ -10,7 +10,7 @@
     <artifactId>spring-boot-swagger2</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-swagger2</name>
+    <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -47,7 +47,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-swagger2</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

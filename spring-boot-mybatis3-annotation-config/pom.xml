@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-mybatis3</artifactId>
+    <artifactId>spring-boot-mybatis3-annotation-config</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-mybatis3</name>
+    <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -45,7 +45,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-mybatis3</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

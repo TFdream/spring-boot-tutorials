@@ -10,7 +10,7 @@
     <artifactId>spring-boot-mybatis3-multi-datasource</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-mybatis3-multi-datasource</name>
+    <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -45,7 +45,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-mybatis3-multi-datasource</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

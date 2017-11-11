@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>1.5.7.RELEASE</version>
     </parent>
 
     <groupId>com.mindflow</groupId>
@@ -15,19 +15,20 @@
 
     <packaging>pom</packaging>
 
-    <name>spring-boot-tutorials</name>
+    <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
     <modules>
         <module>spring-boot-restful</module>
         <module>spring-boot-swagger2</module>
-        <module>spring-boot-mybatis3</module>
+        <module>spring-boot-mybatis3-xml-config</module>
+		<module>spring-boot-mybatis3-annotation-config</module>
         <module>spring-boot-mybatis3-multi-datasource</module>
         <module>spring-boot-actuator</module>
     </modules>
 
     <properties>
-        <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <mybatis.spring.boot.version>1.3.1</mybatis.spring.boot.version>
         <druid.version>1.0.25</druid.version>
         <mysql.connector.version>5.1.39</mysql.connector.version>
         <swagger.version>2.6.1</swagger.version>
