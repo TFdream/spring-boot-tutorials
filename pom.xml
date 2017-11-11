@@ -19,7 +19,7 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>spring-boot-restful</module>
+        <module>spring-boot-helloworld</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis3-xml-config</module>
 		<module>spring-boot-mybatis3-annotation-config</module>

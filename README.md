@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0) 
 
 ## Overview
-Spring Boot 1.5.6 Tutorials.
+Spring Boot 1.5.7.RELEASE Tutorials.
 
 ## Requirements
 The minimum requirements to run the quick start are:
