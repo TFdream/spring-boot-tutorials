@@ -1,6 +1,6 @@
-package com.mindflow.springboot.swagger.controller;
+package springboot.swagger.controller;
 
-import com.mindflow.springboot.swagger.domain.User;
+import springboot.swagger.domain.User;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;

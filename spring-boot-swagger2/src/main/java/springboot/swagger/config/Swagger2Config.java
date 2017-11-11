@@ -1,4 +1,4 @@
-package com.mindflow.springboot.swagger.swagger;
+package springboot.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * ${DESCRIPTION}
  *
  * @author Ricky Fung
- * @create 2017-01-02 23:53
  */
 @EnableSwagger2
 @Configuration

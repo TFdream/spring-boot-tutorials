@@ -1,4 +1,4 @@
-package com.mindflow.springboot.swagger.domain;
+package springboot.swagger.domain;
 
 /**
  * ${DESCRIPTION}

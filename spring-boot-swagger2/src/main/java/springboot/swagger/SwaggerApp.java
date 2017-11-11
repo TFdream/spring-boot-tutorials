@@ -1,4 +1,4 @@
-package com.mindflow.springboot.swagger;
+package springboot.swagger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Hello world!
  *
  */
-@SpringBootApplication(scanBasePackages = {"com.mindflow.springboot.swagger"})
+@SpringBootApplication
 public class SwaggerApp {
 
     public static void main( String[] args ) {
