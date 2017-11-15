@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+my:
+  name: demo
+
+spring:
+  profiles:
+    active: dev
+
+---
+#development environment
+spring:
+  profiles: dev
+
+server:
+  port: 8160
+
+my:
+  name: ricky
+
+---
+#test environment
+spring:
+  profiles: test
+
+server:
+  port: 8180
+
+my:
+  name: test
+
+---
+#production environment
+spring:
+  profiles: prod
+
+server:
+  port: 8190
+
+my:
+  name: prod

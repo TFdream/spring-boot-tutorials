@@ -20,6 +20,7 @@
 
     <modules>
         <module>spring-boot-helloworld</module>
+        <module>spring-boot-profile</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis3-xml-config</module>
 		<module>spring-boot-mybatis3-annotation-config</module>
