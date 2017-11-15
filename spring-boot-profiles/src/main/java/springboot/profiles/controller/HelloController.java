@@ -1,8 +1,8 @@
-package springboot.profile.controller;
+package springboot.profiles.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springboot.profile.config.DemoConfiguration;
+import springboot.profiles.config.DemoConfiguration;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package springboot.profile;
+package springboot.profiles;
 
 import org.junit.Test;
 

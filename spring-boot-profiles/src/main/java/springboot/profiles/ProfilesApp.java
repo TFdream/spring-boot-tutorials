@@ -1,4 +1,4 @@
-package springboot.profile;
+package springboot.profiles;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class ProfileApp {
+public class ProfilesApp {
 
     public static void main( String[] args ) throws Exception {
 
-        SpringApplication.run(ProfileApp.class, args);
+        SpringApplication.run(ProfilesApp.class, args);
     }
 }
