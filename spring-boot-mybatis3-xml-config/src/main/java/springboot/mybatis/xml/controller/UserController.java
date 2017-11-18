@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
  * ${DESCRIPTION}
  *
  * @author Ricky Fung
- * @date 2017-02-14 17:33
  */
 @RestController
 public class UserController {
