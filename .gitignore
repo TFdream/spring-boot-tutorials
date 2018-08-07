@@ -6,6 +6,9 @@
 *.tar
 *.tar.gz
 
+# Java class files
+*.class
+
 # eclipse ignore
 *.settings/
 .project
@@ -19,6 +22,7 @@
 
 # temp ignore
 *.log
+*.log.*
 *.cache
 *.diff
 *.patch
