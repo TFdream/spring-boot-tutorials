@@ -1,9 +1,0 @@
-#development environment
-spring:
-  profiles: dev
-
-server:
-  port: 8160
-
-my:
-  name: ricky

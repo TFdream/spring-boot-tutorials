@@ -1,9 +1,0 @@
-server:
-  port: 8080
-
-my:
-  name: demo
-
-spring:
-  profiles:
-    active: dev

@@ -1,9 +1,0 @@
-#production environment
-spring:
-  profiles: prod
-
-server:
-  port: 8190
-
-my:
-  name: prod
