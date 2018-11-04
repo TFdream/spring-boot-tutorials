@@ -1,4 +1,4 @@
-package springboot.tutorials.restful;
+package io.dreamstudio.springboot.restful;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

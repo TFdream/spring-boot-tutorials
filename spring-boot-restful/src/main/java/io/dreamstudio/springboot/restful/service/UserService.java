@@ -1,6 +1,6 @@
-package springboot.tutorials.restful.service;
+package io.dreamstudio.springboot.restful.service;
 
-import springboot.tutorials.restful.model.User;
+import io.dreamstudio.springboot.restful.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

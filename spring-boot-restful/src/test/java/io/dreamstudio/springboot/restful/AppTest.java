@@ -1,4 +1,4 @@
-package springboot.tutorials.restful;
+package io.dreamstudio.springboot.restful;
 
 import org.junit.Test;
 

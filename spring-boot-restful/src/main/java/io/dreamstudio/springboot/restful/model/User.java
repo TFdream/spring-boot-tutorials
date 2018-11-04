@@ -1,4 +1,4 @@
-package springboot.tutorials.restful.model;
+package io.dreamstudio.springboot.restful.model;
 
 import java.util.List;
 

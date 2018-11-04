@@ -1,10 +1,10 @@
-package springboot.tutorials.restful.web.controller;
+package io.dreamstudio.springboot.restful.web.controller;
 
+import io.dreamstudio.springboot.restful.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springboot.tutorials.restful.model.User;
-import springboot.tutorials.restful.service.UserService;
-import springboot.tutorials.restful.web.ApiResult;
+import io.dreamstudio.springboot.restful.model.User;
+import io.dreamstudio.springboot.restful.web.ApiResult;
 
 /**
  * @author Ricky Fung

@@ -1,4 +1,4 @@
-package springboot.tutorials.restful.web.interceptor;
+package io.dreamstudio.springboot.restful.web.interceptor;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

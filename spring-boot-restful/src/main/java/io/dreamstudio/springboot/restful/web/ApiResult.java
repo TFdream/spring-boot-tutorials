@@ -1,4 +1,4 @@
-package springboot.tutorials.restful.web;
+package io.dreamstudio.springboot.restful.web;
 
 import java.io.Serializable;
 
