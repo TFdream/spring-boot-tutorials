@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="io.dreamstudio.mybatis.mapper.UserMapper" >
+<mapper namespace="io.dreamstudio.springboot.mybatis.mapper.UserMapper" >
 
-    <resultMap id="BaseResultMap" type="io.dreamstudio.mybatis.model.User" >
+    <resultMap id="BaseResultMap" type="io.dreamstudio.springboot.mybatis.model.User" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
@@ -22,13 +22,13 @@
         where id = #{id,jdbcType=BIGINT}
     </select>
 
-    <insert id="insert" parameterType="io.dreamstudio.mybatis.model.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="io.dreamstudio.springboot.mybatis.model.User" useGeneratedKeys="true" keyProperty="id">
         insert into user (name, password, age, create_time,update_time)
         values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
         #{age,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP},#{updateTime,jdbcType=TIMESTAMP})
     </insert>
 
-    <insert id="insertSelective" parameterType="io.dreamstudio.mybatis.model.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertSelective" parameterType="io.dreamstudio.springboot.mybatis.model.User" useGeneratedKeys="true" keyProperty="id">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -72,7 +72,7 @@
         </trim>
     </insert>
 
-    <update id="updateByPrimaryKey" parameterType="io.dreamstudio.mybatis.model.User" >
+    <update id="updateByPrimaryKey" parameterType="io.dreamstudio.springboot.mybatis.model.User" >
         update user
         set name = #{name,jdbcType=VARCHAR},
         password = #{password,jdbcType=VARCHAR},
@@ -82,7 +82,7 @@
         where id = #{id,jdbcType=BIGINT}
     </update>
 
-    <update id="updateByPrimaryKeySelective" parameterType="io.dreamstudio.mybatis.model.User" >
+    <update id="updateByPrimaryKeySelective" parameterType="io.dreamstudio.springboot.mybatis.model.User" >
         update user
         <set >
             <if test="name != null" >

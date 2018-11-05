@@ -1,6 +1,6 @@
-package io.dreamstudio.mybatis.mapper;
+package io.dreamstudio.springboot.mybatis.mapper;
 
-import io.dreamstudio.mybatis.model.User;
+import io.dreamstudio.springboot.mybatis.model.User;
 
 /**
  * @author Ricky Fung

@@ -1,7 +1,6 @@
 package io.dreamstudio.springboot.mybatis.mapper;
 
-import io.dreamstudio.mybatis.mapper.UserMapper;
-import io.dreamstudio.mybatis.model.User;
+import io.dreamstudio.springboot.mybatis.model.User;
 import io.dreamstudio.springboot.mybatis.BaseSpringBootJUnitTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package io.dreamstudio.mybatis.configuration;
+package io.dreamstudio.springboot.mybatis.configuration;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  * @author Ricky Fung
  */
 @Configuration
-@MapperScan(basePackages = "io.dreamstudio.mybatis.mapper",
+@MapperScan(basePackages = "io.dreamstudio.springboot.mybatis.mapper",
         sqlSessionFactoryRef = "sqlSessionFactory")
 public class MybatisConfiguration {
 

@@ -1,6 +1,6 @@
 <configuration debug="false">
 	<contextName>springboot-restful</contextName>
-	<property name="LOG_HOME" value="D:/logs/" />
+	<property name="LOG_HOME" value="/Users/apple/Ricky/logs/" />
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>

@@ -1,4 +1,4 @@
-package io.dreamstudio.mybatis.model;
+package io.dreamstudio.springboot.mybatis.model;
 
 import java.util.Date;
 
