@@ -6,9 +6,8 @@ spring:
     host: localhost
     port: 6379
     password: root
-    timeout: 5000
-    lettuce:
+    jedis:
       pool:
-        max-active: 50
+        max-active: 20
         max-idle: 8
         min-idle: 0
