@@ -18,6 +18,6 @@ public class OderPushReceiver {
 
     @RabbitHandler
     public void process(OrderDTO order) {
-        logger.info("接受到订单状态变更消息: "+order);
+        logger.info("接收到订单状态变更消息: "+order);
     }
 }
