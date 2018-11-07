@@ -16,6 +16,7 @@
 		<module>spring-boot-mybatis</module>
         <module>spring-boot-mybatis-druid</module>
         <module>spring-boot-mybatis-hikaricp</module>
+        <module>spring-boot-mybatis-multi-datasource</module>
 		<module>spring-boot-redis-template</module>
         <module>spring-boot-rest-template</module>
         <module>spring-boot-swagger2</module>
