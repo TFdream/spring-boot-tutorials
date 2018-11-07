@@ -2,6 +2,7 @@ package io.dreamstudio.springboot.mybatis.mapper;
 
 import io.dreamstudio.springboot.mybatis.model.User;
 import io.dreamstudio.springboot.mybatis.BaseSpringBootJUnitTest;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,12 +17,14 @@ public class UserMapperTest extends BaseSpringBootJUnitTest {
     private UserMapper userMapper;
 
     @Test
+    @Ignore
     public void testQuery() {
         User user = userMapper.selectByPrimaryKey(3L);
         System.out.println(user);
     }
 
     @Test
+    @Ignore
     public void testInsert() {
         User user = new User();
         user.setName("张三");
