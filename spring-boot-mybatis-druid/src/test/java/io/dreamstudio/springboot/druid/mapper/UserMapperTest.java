@@ -14,10 +14,10 @@ public class UserMapperTest extends BaseSpringBootJUnitTest {
     @Autowired
     private UserMapper userMapper;
 
-    private Long userId = 3L;
+    private Long userId = 15L;
 
     @Test
-    //@Ignore
+    @Ignore
     public void testQuery() {
         User user = userMapper.selectByPrimaryKey(userId);
         System.out.println(user);
