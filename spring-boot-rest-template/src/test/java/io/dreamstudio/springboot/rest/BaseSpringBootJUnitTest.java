@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BaseSpringBootJUnitTest {
 
     @Test
-    public void testContext() {
+    public void testApp() {
 
     }
 }
