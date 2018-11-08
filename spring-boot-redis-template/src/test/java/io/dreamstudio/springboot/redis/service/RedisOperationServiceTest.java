@@ -1,11 +1,12 @@
 package io.dreamstudio.springboot.redis.service;
 
 import io.dreamstudio.springboot.redis.BaseSpringBootJUnitTest;
-import io.dreamstudio.springboot.redis.model.User;
+import io.dreamstudio.springboot.redis.model.Book;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * @author Ricky Fung
@@ -23,12 +24,13 @@ public class RedisOperationServiceTest extends BaseSpringBootJUnitTest {
         System.out.println(redisOperationService.get(key1));
 
         String key2 = "user1";
-        User user = new User();
-        user.setId(15L);
-        user.setName("ricky");
-        user.setAge(29);
-        redisOperationService.setObject(key2, user);
-        User result = (User) redisOperationService.getObject(key2);
+        Book book = new Book();
+        book.setId(15L);
+        book.setAuthor("ricky");
+        book.setIsbn(29);
+        book.setPublishTime(new Date());
+        redisOperationService.setObject(key2, book);
+        Book result = redisOperationService.getObject(key2);
         System.out.println(result);
     }
 }

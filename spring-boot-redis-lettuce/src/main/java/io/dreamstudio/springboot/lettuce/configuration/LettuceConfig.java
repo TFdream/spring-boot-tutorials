@@ -1,29 +1,31 @@
-package io.dreamstudio.springboot.redis.configuration;
+package io.dreamstudio.springboot.lettuce.configuration;
 
-import io.dreamstudio.springboot.redis.model.Book;
+import io.dreamstudio.springboot.lettuce.model.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * @author Ricky Fung
  */
 @Configuration
-public class RedisTemplateConfig {
+public class LettuceConfig {
 
     @Bean
-    public RedisTemplate<String, Book> redisTemplate(RedisConnectionFactory connectionFactory) {
-        RedisTemplate<String, Book> redisTemplate = new RedisTemplate<>();
+    public RedisTemplate<String, Student> redisTemplate(RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String, Student> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
 
-        //use Jackson2JsonRedisSerializer
-        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Book.class);
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+        //Jackson2JsonRedisSerializer
+        RedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Student.class);
+        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+        redisTemplate.setKeySerializer(stringRedisSerializer);
+        redisTemplate.setHashKeySerializer(stringRedisSerializer);
         redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
         return redisTemplate;

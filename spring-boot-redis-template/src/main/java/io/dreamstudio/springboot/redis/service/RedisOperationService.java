@@ -1,5 +1,6 @@
 package io.dreamstudio.springboot.redis.service;
 
+import io.dreamstudio.springboot.redis.model.Book;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import javax.annotation.Resource;
 public class RedisOperationService {
 
     @Resource(name = "redisTemplate")
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Book> redisTemplate;
 
     @Resource(name = "stringRedisTemplate")
     private StringRedisTemplate stringRedisTemplate;
@@ -22,7 +23,7 @@ public class RedisOperationService {
         stringRedisTemplate.opsForValue().set(key, value);
     }
 
-    public void setObject(String key, Object value) {
+    public void setObject(String key, Book value) {
         redisTemplate.opsForValue().set(key, value);
     }
 
@@ -30,7 +31,7 @@ public class RedisOperationService {
         return stringRedisTemplate.opsForValue().get(key);
     }
 
-    public Object getObject(String key) {
+    public Book getObject(String key) {
         return redisTemplate.opsForValue().get(key);
     }
 
