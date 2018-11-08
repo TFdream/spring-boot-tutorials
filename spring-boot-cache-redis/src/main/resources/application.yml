@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6380
+    password: 123456
+    timeout: 5s
+    lettuce:
+      pool:
+        min-idle: 0
+        max-active: 20
+        max-idle: 8
+        max-wait: -1ms
+

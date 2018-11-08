@@ -19,6 +19,7 @@
         <module>spring-boot-mybatis-multi-datasource</module>
 		<module>spring-boot-redis-template</module>
         <module>spring-boot-redis-lettuce</module>
+        <module>spring-boot-cache-redis</module>
         <module>spring-boot-rest-template</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-rabbitmq</module>
