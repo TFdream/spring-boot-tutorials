@@ -10,7 +10,6 @@ The minimum requirements to run the quick start are:
 * A java-based project management software like [Maven](https://maven.apache.org/) or [Gradle](http://gradle.org/)
 
 ## spring-boot 2.x系列
-## spring-boot 2.x系列
 * [Spring Boot实战 - 构建RESTful API]()
 * [Spring Boot实战 - 使用Swagger2构建强大的RESTful API文档]()
 * [Spring Boot实战 - 整合MyBatis]()
