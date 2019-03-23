@@ -13,16 +13,18 @@
 
     <modules>
         <module>spring-boot-restful</module>
-	<module>spring-boot-mybatis</module>
+	    <module>spring-boot-mybatis</module>
         <module>spring-boot-mybatis-druid</module>
         <module>spring-boot-mybatis-hikaricp</module>
         <module>spring-boot-mybatis-multi-datasource</module>
-	<module>spring-boot-redis-template</module>
+	    <module>spring-boot-redis-template</module>
         <module>spring-boot-redis-lettuce</module>
         <module>spring-boot-cache-redis</module>
         <module>spring-boot-rest-template</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-rabbitmq</module>
+        <module>spring-boot-jsp</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
     <properties>
