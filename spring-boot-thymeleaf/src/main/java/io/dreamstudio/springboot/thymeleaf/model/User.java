@@ -12,7 +12,7 @@ public class User {
     private Long id;
     private String name;
     private int age;
-    private List<String> hobbies;
+    private String address;
 
     public Long getId() {
         return id;
@@ -38,11 +38,11 @@ public class User {
         this.age = age;
     }
 
-    public List<String> getHobbies() {
-        return hobbies;
+    public String getAddress() {
+        return address;
     }
 
-    public void setHobbies(List<String> hobbies) {
-        this.hobbies = hobbies;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

@@ -1,2 +1,12 @@
 server:
   port: 8080
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    mode: HTML
+    # hotfix
+    cache: false
+
