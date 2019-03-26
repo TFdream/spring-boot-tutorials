@@ -1,6 +1,6 @@
 ## Spring boot 上传文件
 
-## 设置单个文件的大小
+### 设置单个文件的大小
 Spring boot 1.5.x中配置如下：
 ```
 spring.http.multipart.maxFileSize = 10Mb  
