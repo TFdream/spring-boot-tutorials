@@ -1,4 +1,4 @@
-package io.dreamstudio.springboot.redis.model;
+package io.dreamstudio.springboot.jedis.model;
 
 import java.util.Date;
 

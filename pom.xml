@@ -17,7 +17,7 @@
         <module>spring-boot-mybatis-druid</module>
         <module>spring-boot-mybatis-hikaricp</module>
         <module>spring-boot-mybatis-multi-datasource</module>
-	    <module>spring-boot-redis-template</module>
+	    <module>spring-boot-redis-jedis</module>
         <module>spring-boot-redis-lettuce</module>
         <module>spring-boot-cache-redis</module>
         <module>spring-boot-rest-template</module>

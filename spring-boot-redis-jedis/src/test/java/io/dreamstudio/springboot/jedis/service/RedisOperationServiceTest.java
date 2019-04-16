@@ -1,7 +1,7 @@
-package io.dreamstudio.springboot.redis.service;
+package io.dreamstudio.springboot.jedis.service;
 
-import io.dreamstudio.springboot.redis.BaseSpringBootJUnitTest;
-import io.dreamstudio.springboot.redis.model.Book;
+import io.dreamstudio.springboot.jedis.BaseSpringBootJUnitTest;
+import io.dreamstudio.springboot.jedis.model.Book;
 import org.junit.Ignore;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package io.dreamstudio.springboot.redis.service;
+package io.dreamstudio.springboot.jedis.service;
 
-import io.dreamstudio.springboot.redis.model.Book;
+import io.dreamstudio.springboot.jedis.model.Book;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
