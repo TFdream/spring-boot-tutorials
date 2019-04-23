@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.RedisPassword;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
@@ -19,6 +20,8 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
+
+import java.time.Duration;
 
 /**
  * @author Ricky Fung
@@ -54,46 +57,113 @@ public class RedisTemplateConfig {
         return template;
     }
 
-    @ConfigurationProperties
-    class DataJedisProperties{
-        @Value("${spring.redis.host}")
-        private  String host;
-        @Value("${spring.redis.password}")
-        private  String password;
-        @Value("${spring.redis.port}")
-        private  int port;
-        @Value("${spring.redis.timeout}")
-        private  int timeout;
+    @Bean
+    public JedisConnectionFactory jedisConnectionFactory (DataJedisProperties dataJedisProperties) {
+        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
+        config.setHostName(dataJedisProperties.getHost());
+        config.setPort(dataJedisProperties.getPort());
+        config.setPassword(RedisPassword.of(dataJedisProperties.getPassword()));
 
-        @Value("${spring.redis.jedis.pool.min-idle}")
+        JedisClientConfiguration.JedisClientConfigurationBuilder builder = JedisClientConfiguration.builder();
+
+        builder.readTimeout(dataJedisProperties.getTimeout())
+                .connectTimeout(dataJedisProperties.getTimeout());
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        jedisPoolConfig.setMaxIdle(dataJedisProperties.getMaxIdle());
+        jedisPoolConfig.setMinIdle(dataJedisProperties.getMinIdle());
+        jedisPoolConfig.setMaxTotal(dataJedisProperties.getMaxActive());
+        jedisPoolConfig.setMaxWaitMillis(dataJedisProperties.getMaxWaitMillis());
+        builder.usePooling().poolConfig(jedisPoolConfig);
+
+        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(config, builder.build());
+        return jedisConnectionFactory;
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "spring.redis")
+    public DataJedisProperties dataJedisProperties(){
+        return new DataJedisProperties();
+    }
+
+    class DataJedisProperties{
+        private  String host;
+
+        private  String password;
+
+        private int port;
+
+        private Duration timeout;
+
         private int minIdle;
 
-        @Value("${spring.redis.jedis.pool.max-idle}")
         private int maxIdle;
 
-        @Value("${spring.redis.jedis.pool.max-active}")
         private int maxActive;
 
-        @Value("${spring.redis.jedis.pool.max-wait}")
         private long maxWaitMillis;
 
-        @Bean
-        public JedisConnectionFactory jedisConnectionFactory () {
-            RedisStandaloneConfiguration rf = new RedisStandaloneConfiguration();
-            rf.setHostName(host);
-            rf.setPort(port);
+        public String getHost() {
+            return host;
+        }
 
-            JedisClientConfiguration.JedisPoolingClientConfigurationBuilder jpb=
-                    (JedisClientConfiguration.JedisPoolingClientConfigurationBuilder)JedisClientConfiguration.builder();
+        public void setHost(String host) {
+            this.host = host;
+        }
 
-            JedisPoolConfig jedisPoolConfig=new JedisPoolConfig();
-            jedisPoolConfig.setMaxIdle(maxIdle);
-            jedisPoolConfig.setMinIdle(minIdle);
-            jedisPoolConfig.setMaxTotal(maxActive);
-            jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
-            jpb.poolConfig(jedisPoolConfig);
-            JedisConnectionFactory jedisConnectionFactory=new JedisConnectionFactory(rf, jpb.build());
-            return jedisConnectionFactory;
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public int getPort() {
+            return port;
+        }
+
+        public void setPort(int port) {
+            this.port = port;
+        }
+
+        public Duration getTimeout() {
+            return timeout;
+        }
+
+        public void setTimeout(Duration timeout) {
+            this.timeout = timeout;
+        }
+
+        public int getMinIdle() {
+            return minIdle;
+        }
+
+        public void setMinIdle(int minIdle) {
+            this.minIdle = minIdle;
+        }
+
+        public int getMaxIdle() {
+            return maxIdle;
+        }
+
+        public void setMaxIdle(int maxIdle) {
+            this.maxIdle = maxIdle;
+        }
+
+        public int getMaxActive() {
+            return maxActive;
+        }
+
+        public void setMaxActive(int maxActive) {
+            this.maxActive = maxActive;
+        }
+
+        public long getMaxWaitMillis() {
+            return maxWaitMillis;
+        }
+
+        public void setMaxWaitMillis(long maxWaitMillis) {
+            this.maxWaitMillis = maxWaitMillis;
         }
     }
 
