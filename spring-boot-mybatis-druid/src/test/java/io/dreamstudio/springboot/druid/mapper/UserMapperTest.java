@@ -6,12 +6,14 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
+
 /**
  * @author Ricky Fung
  */
 public class UserMapperTest extends BaseSpringBootJUnitTest {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     private Long userId = 15L;

@@ -7,6 +7,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Date;
  */
 public class OrderMapperTest extends BaseSpringBootJUnitTest {
 
-    @Autowired
+    @Resource
     private OrderMapper orderMapper;
 
     private Long id = 1L;

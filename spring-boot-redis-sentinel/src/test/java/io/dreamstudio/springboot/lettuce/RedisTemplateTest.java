@@ -1,6 +1,6 @@
 package io.dreamstudio.springboot.lettuce;
 
-import io.dreamstudio.springboot.lettuce.model.Student;
+import io.dreamstudio.springboot.sentinel.model.Student;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class RedisTemplateTest extends BaseSpringBootJUnitTest {
 
-    @Resource(name = "redisTemplate")
+    @Resource
     private RedisTemplate<String, Student> redisTemplate;
 
     @Test

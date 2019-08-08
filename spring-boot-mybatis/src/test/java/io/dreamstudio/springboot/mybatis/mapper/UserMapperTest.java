@@ -6,6 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Date;
  */
 public class UserMapperTest extends BaseSpringBootJUnitTest {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Test

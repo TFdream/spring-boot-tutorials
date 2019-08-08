@@ -26,10 +26,16 @@
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-jsp</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-upload-file</module>
+        <module>spring-boot-async-example</module>
+        <module>spring-boot-scheduled-example</module>
+        <module>spring-boot-mail-example</module>
+        <module>spring-boot-dubbo-example</module>
+        <module>spring-boot-redis-pub-sub</module>
     </modules>
 
     <properties>
-        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
         <junit.version>4.12</junit.version>
@@ -38,6 +44,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
