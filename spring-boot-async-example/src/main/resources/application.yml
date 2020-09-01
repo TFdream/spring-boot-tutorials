@@ -13,9 +13,3 @@ spring:
         max-active: 20
         max-idle: 8
         max-wait: -1ms
-
-#tracing
-lego:
-  tracing:
-    enable: true
-    pathPatterns: /*

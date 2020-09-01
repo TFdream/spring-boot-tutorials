@@ -52,7 +52,7 @@
         <dependency>
             <groupId>com.iqianjin</groupId>
             <artifactId>lego-spring-boot-starter</artifactId>
-            <version>0.3.2</version>
+            <version>0.3.5-SNAPSHOT</version>
         </dependency>
 
         <dependency>

@@ -20,6 +20,7 @@ public class UserService {
     public Future<String> getUserById(Long userId) {
         LOG.info("查询用户信息开始, userId:{}", userId);
         sleep(2000);
+        LOG.info("查询用户信息结束, userId:{}", userId);
         return new AsyncResult<String>(String.format("userId:%s", userId));
     }
 

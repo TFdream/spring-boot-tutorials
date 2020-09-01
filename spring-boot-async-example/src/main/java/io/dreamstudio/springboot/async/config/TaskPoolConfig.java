@@ -1,5 +1,6 @@
 package io.dreamstudio.springboot.async.config;
 
+import com.iqianjin.lego.tracing.spring.TraceThreadPoolTaskExecutor;
 import com.iqianjin.lego.tracing.ttl.TaskDecorator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ public class TaskPoolConfig {
 
     @Bean("taskExecutor")
     public Executor taskExecutor() {
-        ThreadPoolTaskExecutor executor = new MyThreadPoolTaskExecutor();
+        ThreadPoolTaskExecutor executor = new TraceThreadPoolTaskExecutor();
         executor.setCorePoolSize(10);
         executor.setMaxPoolSize(20);
         executor.setQueueCapacity(200);
