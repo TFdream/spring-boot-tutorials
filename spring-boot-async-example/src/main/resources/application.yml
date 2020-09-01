@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    host: 10.10.156.33
+    port: 6400
+    password: redis2019
+    timeout: 5s
+    lettuce:
+      pool:
+        min-idle: 0
+        max-active: 20
+        max-idle: 8
+        max-wait: -1ms
+
+#tracing
+lego:
+  tracing:
+    enable: true
+    pathPatterns: /*
