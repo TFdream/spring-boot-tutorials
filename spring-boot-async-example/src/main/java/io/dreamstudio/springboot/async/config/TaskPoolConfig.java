@@ -1,7 +1,5 @@
 package io.dreamstudio.springboot.async.config;
 
-import com.iqianjin.lego.tracing.spring.TraceThreadPoolTaskExecutor;
-import com.iqianjin.lego.tracing.ttl.TaskDecorator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +20,7 @@ public class TaskPoolConfig {
 
     @Bean("taskExecutor")
     public Executor taskExecutor() {
-        ThreadPoolTaskExecutor executor = new TraceThreadPoolTaskExecutor();
+        ThreadPoolTaskExecutor executor = new MyThreadPoolTaskExecutor();
         executor.setCorePoolSize(10);
         executor.setMaxPoolSize(20);
         executor.setQueueCapacity(200);
@@ -36,19 +34,24 @@ public class TaskPoolConfig {
         @Override
         public void execute(Runnable task) {
             LOG.info("execute task:{}", task);
-            super.execute(TaskDecorator.decorate(task));
+            super.execute(task);
+        }
+
+        @Override
+        public void execute(Runnable task, long startTimeout) {
+            super.execute(task, startTimeout);
         }
 
         @Override
         public Future<?> submit(Runnable task) {
             LOG.info("submit Runnable task:{}", task);
-            return super.submit(TaskDecorator.decorate(task));
+            return super.submit(task);
         }
 
         @Override
         public <T> Future<T> submit(Callable<T> task) {
             LOG.info("submit Callable task:{}", task);
-            return super.submit(TaskDecorator.decorate(task));
+            return super.submit(task);
         }
     }
 }
