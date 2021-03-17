@@ -4,10 +4,10 @@ server:
 spring:
     datasource:
       druid:
-       url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+       url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
        username: root
        password: root2018
-       driver-class-name: com.mysql.jdbc.Driver
+       driver-class-name: com.mysql.cj.jdbc.Driver
        initialSize: 20
        minIdle: 1
        maxActive: 100
