@@ -1,8 +1,8 @@
 package io.dreamstudio.springboot.rabbitmq.producer.web;
 
+import io.dreamstudio.springboot.commons.entity.OrderDTO;
+import io.dreamstudio.springboot.commons.entity.UserDTO;
 import io.dreamstudio.springboot.rabbitmq.producer.configuration.ProducerConfig;
-import io.dreamstudio.springboot.rabbitmq.contract.model.OrderDTO;
-import io.dreamstudio.springboot.rabbitmq.contract.model.UserDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

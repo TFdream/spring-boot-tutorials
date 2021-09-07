@@ -1,7 +1,7 @@
 package io.dreamstudio.springboot.rabbitmq.consumer.receiver;
 
+import io.dreamstudio.springboot.commons.entity.OrderDTO;
 import io.dreamstudio.springboot.rabbitmq.consumer.configuration.ConsumerConfig;
-import io.dreamstudio.springboot.rabbitmq.contract.model.OrderDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;

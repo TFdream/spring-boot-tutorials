@@ -1,4 +1,4 @@
-package io.dreamstudio.springboot.rabbitmq.contract.model;
+package io.dreamstudio.springboot.commons.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;

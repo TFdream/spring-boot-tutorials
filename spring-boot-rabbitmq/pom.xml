@@ -15,7 +15,6 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>spring-boot-rabbitmq-contract</module>
         <module>spring-boot-rabbitmq-producer</module>
         <module>spring-boot-rabbitmq-consumer</module>
     </modules>
@@ -49,20 +48,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
-
+    
+        <!-- commons -->
+        <dependency>
+            <groupId>io.dreamstudio</groupId>
+            <artifactId>commons-module</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
