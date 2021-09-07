@@ -49,7 +49,14 @@
             <artifactId>commons-pool2</artifactId>
             <version>2.6.2</version>
         </dependency>
-
+    
+        <!-- commons -->
+        <dependency>
+            <groupId>io.dreamstudio</groupId>
+            <artifactId>commons-module</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

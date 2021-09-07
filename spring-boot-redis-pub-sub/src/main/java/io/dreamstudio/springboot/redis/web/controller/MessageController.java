@@ -1,6 +1,6 @@
 package io.dreamstudio.springboot.redis.web.controller;
 
-import com.alibaba.fastjson.JSON;
+import io.dreamstudio.springboot.commons.util.JsonUtils;
 import io.dreamstudio.springboot.redis.constant.PubSubConstant;
 import io.dreamstudio.springboot.redis.model.UserDTO;
 import org.slf4j.Logger;
@@ -40,9 +40,9 @@ public class MessageController {
         userDTO.setAddress("北京市朝阳区银河SOHO");
         userDTO.setBirthday(new Date());
 
-        logger.info("publish message:{}", JSON.toJSONString(userDTO));
+        logger.info("publish message:{}", JsonUtils.toJson(userDTO));
 
-        stringRedisTemplate.convertAndSend(PubSubConstant.NEWS_CHANNEL, JSON.toJSONString(userDTO));
+        stringRedisTemplate.convertAndSend(PubSubConstant.NEWS_CHANNEL, JsonUtils.toJson(userDTO));
         return "Over";
     }
 }

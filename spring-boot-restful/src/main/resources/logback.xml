@@ -1,41 +1,39 @@
 <configuration debug="false">
-	<contextName>springboot-restful</contextName>
-	<property name="LOG_HOME" value="D:/logs/" />
-
+	<property name="projectName" value="@project.artifactId@" />
+	<property name="LOG_PATH" value="logs/${projectName}"/>
+	<property name="LOG_FILE_NAME" value="${projectName}"/>
+	<property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{X-TraceId}] %-5level %logger - %msg%n"/>
+	
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+			<pattern>${LOG_PATTERN}</pattern>
 		</encoder>
 	</appender>
-
-	<appender name="appInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOG_HOME}/info/springboot-restful-info.log</file>
-		<append>true</append>
-
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>INFO</level>
-		</filter>
-
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_HOME}/info/springboot-restful.%d{yyyy-MM-dd}-info.log.gz
-			</fileNamePattern>
-			<maxHistory>360</maxHistory>
+	
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxFileSize>500MB</maxFileSize>
+			<maxHistory>7</maxHistory>
+			<totalSizeCap>4GB</totalSizeCap>
 		</rollingPolicy>
-
-		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		<encoder>
+			<pattern>${LOG_PATTERN}</pattern>
+			<charset>UTF-8</charset>
 		</encoder>
 	</appender>
-
-	<!-- AsyncAppender -->
-	<appender name="appInfoAsync" class="ch.qos.logback.classic.AsyncAppender">
-		<discardingThreshold>0</discardingThreshold>
-		<queueSize>2000</queueSize>
-		<appender-ref ref="appInfo" />
+	
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${LOG_PATTERN}</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
 	</appender>
-
+	
 	<root level="INFO">
-		<appender-ref ref="STDOUT" />
-		<appender-ref ref="appInfoAsync" />
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="FILE"/>
+		<appender-ref ref="LOGSTASH"/>
 	</root>
+	
 </configuration>

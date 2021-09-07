@@ -43,6 +43,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+    
+        <!-- commons -->
+        <dependency>
+            <groupId>io.dreamstudio</groupId>
+            <artifactId>commons-module</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

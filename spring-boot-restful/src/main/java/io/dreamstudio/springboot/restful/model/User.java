@@ -3,10 +3,7 @@ package io.dreamstudio.springboot.restful.model;
 import java.util.List;
 
 /**
- * ${DESCRIPTION}
- *
  * @author Ricky Fung
- * @create 2016-11-09 17:13
  */
 public class User {
     private Long id;

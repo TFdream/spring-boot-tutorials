@@ -1,6 +1,6 @@
 package io.dreamstudio.springboot.redis.receiver;
 
-import com.alibaba.fastjson.JSON;
+import io.dreamstudio.springboot.commons.util.JsonUtils;
 import io.dreamstudio.springboot.redis.model.UserDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class DemoReceiver implements MessageListener {
 
         String body = StringRedisSerializer.UTF_8.deserialize(message.getBody());
 
-        UserDTO userDTO = JSON.parseObject(body, UserDTO.class);
+        UserDTO userDTO = JsonUtils.parseObject(body, UserDTO.class);
 
         logger.info("Receive channel:{}, body:{}", channel, body);
     }
