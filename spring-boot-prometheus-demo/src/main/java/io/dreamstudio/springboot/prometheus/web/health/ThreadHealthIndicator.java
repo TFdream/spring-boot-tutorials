@@ -1,6 +1,6 @@
 package io.dreamstudio.springboot.prometheus.web.health;
 
-import io.dreamstudio.springboot.prometheus.DynamicThreadPoolExecutor;
+import io.dreamstudio.springboot.prometheus.dynamic.DynamicThreadPoolExecutor;
 import org.springframework.boot.actuate.health.AbstractHealthIndicator;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.stereotype.Component;

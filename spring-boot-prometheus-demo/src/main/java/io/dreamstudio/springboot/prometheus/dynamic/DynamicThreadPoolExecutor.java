@@ -1,4 +1,4 @@
-package io.dreamstudio.springboot.prometheus;
+package io.dreamstudio.springboot.prometheus.dynamic;
 
 import io.micrometer.core.instrument.util.NamedThreadFactory;
 
@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 动态线程池实现
  * @author Ricky Fung
  */
 public class DynamicThreadPoolExecutor extends ThreadPoolExecutor {
@@ -18,7 +19,7 @@ public class DynamicThreadPoolExecutor extends ThreadPoolExecutor {
     /**
      * 线程池名称
      */
-    private String name;
+    private final String name;
     
     public DynamicThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit,
             BlockingQueue<Runnable> workQueue) {

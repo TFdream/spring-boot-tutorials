@@ -2,7 +2,7 @@ package io.dreamstudio.springboot.prometheus.metrics;
 
 import io.dreamstudio.springboot.commons.util.IpUtils;
 import io.dreamstudio.springboot.commons.util.RandomUtils;
-import io.dreamstudio.springboot.prometheus.DynamicThreadPoolExecutor;
+import io.dreamstudio.springboot.prometheus.dynamic.DynamicThreadPoolExecutor;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tags;
 import org.slf4j.Logger;
@@ -12,13 +12,14 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author Ricky Fung
  */
 @Component
-public class ThreadPoolMetric {
+public class ThreadPoolMetrics {
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
     
     @Resource
@@ -37,12 +38,21 @@ public class ThreadPoolMetric {
     
     @Scheduled(fixedDelay = 10_000)
     public void scrapeResources() {
-        LOG.info("定时抓取线程池信息");
+        LOG.info("定时抓取线程池信息开始");
         counter.set(dynamicThreadPoolExecutor.getTaskCount());
         
-        int random = RandomUtils.nextInt(3, 20);
+        int random = RandomUtils.nextInt(8, 32);
         for (int i=0; i<random; i++) {
-            dynamicThreadPoolExecutor.execute(()->{LOG.info("提交定时任务");});
+            dynamicThreadPoolExecutor.execute(()->{
+                LOG.info("定时任务执行开始");
+                try {
+                    TimeUnit.MILLISECONDS.sleep(random * 100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                LOG.info("定时任务执行结束");
+            });
         }
+        LOG.info("定时抓取线程池信息结束");
     }
 }
