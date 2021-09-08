@@ -1,17 +1,23 @@
 server:
   port: 8080
 
+spring:
+  application:
+    name: spring-boot-prometheus-demo
+
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-        exclude: info, trace
 
   metrics:
     export:
       prometheus:
         enabled: true
+    tags:
+      application : ${spring.application.name}
+
   endpoint:
     prometheus:
       enabled: true
