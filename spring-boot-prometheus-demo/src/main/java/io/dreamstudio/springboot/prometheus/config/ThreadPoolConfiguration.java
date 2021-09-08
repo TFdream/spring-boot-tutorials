@@ -1,10 +1,10 @@
 package io.dreamstudio.springboot.prometheus.config;
 
+import io.dreamstudio.springboot.prometheus.DynamicThreadPoolExecutor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class ThreadPoolConfiguration {
     
     @Bean
-    public ThreadPoolExecutor threadPoolExecutor() {
-        return new ThreadPoolExecutor(2, 5, 5, TimeUnit.MINUTES, new ArrayBlockingQueue<>(200));
+    public DynamicThreadPoolExecutor dynamicThreadPoolExecutor() {
+        return new DynamicThreadPoolExecutor("dtp",2, 5, 5, TimeUnit.MINUTES, new ArrayBlockingQueue<>(200));
     }
 }
