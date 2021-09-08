@@ -41,12 +41,12 @@ public class ThreadPoolMetrics {
         LOG.info("定时抓取线程池信息开始");
         counter.set(dynamicThreadPoolExecutor.getTaskCount());
         
-        int random = RandomUtils.nextInt(8, 32);
+        int random = RandomUtils.nextInt(16, 128);
         for (int i=0; i<random; i++) {
             dynamicThreadPoolExecutor.execute(()->{
-                LOG.info("定时任务执行开始");
+                LOG.info("定时任务执行开始, random={}", random);
                 try {
-                    TimeUnit.MILLISECONDS.sleep(random * 100);
+                    TimeUnit.MILLISECONDS.sleep(random * 50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

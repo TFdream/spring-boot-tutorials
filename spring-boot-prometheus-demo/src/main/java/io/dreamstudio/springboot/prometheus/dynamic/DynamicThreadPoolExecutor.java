@@ -1,6 +1,6 @@
 package io.dreamstudio.springboot.prometheus.dynamic;
 
-import io.micrometer.core.instrument.util.NamedThreadFactory;
+import io.dreamstudio.springboot.commons.util.NamedThreadFactory;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;

@@ -15,6 +15,7 @@ public class ThreadPoolConfiguration {
     
     @Bean
     public DynamicThreadPoolExecutor dynamicThreadPoolExecutor() {
-        return new DynamicThreadPoolExecutor("dtp",2, 5, 5, TimeUnit.MINUTES, new ResizableCapacityLinkedBlockingQueue<>(200));
+        return new DynamicThreadPoolExecutor("dynamic-pool",2, 8,
+                5, TimeUnit.MINUTES, new ResizableCapacityLinkedBlockingQueue<>(50));
     }
 }
